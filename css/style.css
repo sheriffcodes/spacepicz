@@ -88,13 +88,16 @@ a:hover{
   font-size: 2.2rem;
   font-weight: 500;
 }
+.pick-date-p{
+  text-align: center;
+}
 form{
   width: 100%;
 }
 input, input::placeholder{
   text-align: center;
   border: none;
-  width: 60%;
+  width: 100%;
   padding: 1rem;
   border-radius: 1rem;
   font-size: 1.2rem;
@@ -103,7 +106,7 @@ input, input::placeholder{
 }
 button{
   border: none;
-  width: 60%;
+  width: 100%;
   padding: 1rem;
   cursor: pointer;
   background-color: rgba(100,100,100,.2);  
@@ -143,7 +146,7 @@ iframe{
 /*******************************************/
 
 @media screen 
-  and (max-device-width: 450px) 
+  and (max-device-width: 900px) 
   and (max-device-width: 1600px){
   html{
     font-size: 30px;
@@ -155,6 +158,9 @@ iframe{
     display: flex;
     flex-basis: 50%;
     gap: 2rem;
+  }
+  .nav-ul-2{
+    flex-basis: 50%;
   }
   .main{
     flex-direction: column;
