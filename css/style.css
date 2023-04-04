@@ -99,7 +99,7 @@ a:hover{
 }
 form{
   width: 100%;
-  border: 1PX SOLID RED;
+  /* border: 1PX SOLID RED; */
   
 }
 input, input::placeholder{
