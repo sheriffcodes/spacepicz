@@ -88,7 +88,7 @@ a:hover{
   font-size: 2.2rem;
   font-weight: 500;
 }
-input. input::placeholder{
+input{
   text-align: center;
   border: none;
   outline: none;
@@ -99,6 +99,8 @@ input. input::placeholder{
   color: black;
 }
 input::placeholder{
+  font-size: 1.2rem;
+  color: black;
   font-weight: 500;
 }
 button{
@@ -151,11 +153,10 @@ iframe{
   body, .container, .main {
     position: static;
   }
-  /* input::placeholder{
-    font-size: 16px;
-    font-weight: 200;
-    color: black;
-  } */
+  input::placeholder{
+    font-size: 1rem;
+    font-weight: 300;
+  }
   .nav-ul-1{
     display: flex;
     flex-basis: 50%;
