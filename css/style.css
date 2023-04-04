@@ -146,8 +146,7 @@ iframe{
 
 @media screen 
   and (max-device-width: 800px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
+  and (max-device-width: 1600px){
   html{
     font-size: 30px;
   }
@@ -155,8 +154,9 @@ iframe{
     position: static;
   }
   input::placeholder{
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 300;
+    color: black;
   }
   .nav-ul-1{
     display: flex;
