@@ -88,7 +88,7 @@ a:hover{
   font-size: 2.2rem;
   font-weight: 500;
 }
-input{
+input, input::placeholder{
   text-align: center;
   border: none;
   width: 60%;
@@ -96,11 +96,7 @@ input{
   border-radius: 1rem;
   font-size: 1.2rem;
   color: black;
-}
-input::placeholder{
-  
-  color: black;
-
+  font-weight: 600;
 }
 button{
   border: none;
