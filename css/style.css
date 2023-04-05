@@ -125,7 +125,7 @@ button{
   border: none;
   width: 100%;
   padding: 1rem;
-  background-color: rgba(100,100,100,.5);
+  background-color: rgba(242, 36, 63, 0.4);  
   cursor: pointer;
   color: white;
   font-weight: 300;
@@ -133,8 +133,7 @@ button{
   border-radius: 1rem;
 }
 button:hover{
-  background-color: rgba(242, 36, 63, 0.4);  
-
+  background-color: rgba(100,100,100,.5);
 
 }
 .developer{
@@ -168,7 +167,7 @@ iframe{
 /*******************************************/
 
 @media screen 
-  and (max-device-width: 900px) 
+  and (max-device-width: 1200px) 
   and (max-device-width: 1600px){
   html{
     font-size: 30px;
@@ -176,10 +175,15 @@ iframe{
   body, .container, .main {
     position: static;
   }
+  nav{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 1rem;
+  }
   .nav-ul-1{
     display: flex;
     flex-basis: 50%;
-    gap: 2rem;
+    gap: 1rem;
   }
   .nav-ul-2{
     flex-basis: 50%;
