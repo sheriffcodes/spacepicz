@@ -91,16 +91,12 @@ a:hover{
   font-weight: 400;
   text-align: center;
   width: 100%;
-  /* border: 1px solid red; */
-
 }
 .pick-date-p{
   text-align: center;
 }
 form{
   width: 100%;
-  /* border: 1PX SOLID RED; */
-  
 }
 input, input::placeholder{
   text-align: center;
@@ -112,6 +108,7 @@ input, input::placeholder{
   color: black;
   font-weight: 600;
 }
+
 /* ios input */
 input[type="date"]
 {
@@ -134,7 +131,6 @@ button{
 }
 button:hover{
   background-color: rgba(100,100,100,.5);
-
 }
 .developer{
   font-size: 14px;
