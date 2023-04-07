@@ -29,7 +29,6 @@ body {
   height: 100%;
   background-color: black;
   position: fixed;
-  margin: 0;
 }
 .container{
   background-image: url(../img/bg-nasa-roc.jpg);
@@ -177,7 +176,7 @@ iframe{
 @media screen and (max-width: 800px)
   {
   html{
-    font-size: 16px;
+    font-size: 13px;
   }
  body, .container, .main{
   position: static;
