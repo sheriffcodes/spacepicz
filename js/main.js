@@ -19,7 +19,10 @@ function getFetch(){
     document.querySelector('iframe').src = ''
     document.querySelector('.explanation').innerText = ''
     document.querySelector('.explanation').style.padding = '0rem'
-    document.querySelector('p').classList.remove('error')
+    document.querySelector('iframe').classList.add('hidden')
+    document.querySelector('#img').classList.add('hidden')
+    document.querySelector('.pick-date-p').classList.remove('error')
+    document.querySelector('.main-div-2').classList.remove('hidden')
     //
     
     const url = `https://api.nasa.gov/planetary/apod?api_key=qWCRPmj5gDod3u6MJFLykXRQVMAmMrGfIU2iV1my&date=${choice}`
@@ -31,14 +34,19 @@ function getFetch(){
 
         // condition for setting image or video
         if(data.media_type === 'image'){
+          document.querySelector('#img').classList.remove('hidden')
           document.querySelector('img').src = data.hdurl
           document.querySelector('.explanation').style.padding = '1rem'
           document.querySelector('iframe').src = ''
+          document.querySelector('iframe').classList.add('hidden')
+
         }else if (data.media_type === 'video'){
           document.querySelector('img').src = ''
           document.querySelector('iframe').classList.remove('hidden')
           document.querySelector('iframe').src = data.url
           document.querySelector('.explanation').style.padding = '1rem'
+          document.querySelector('#img').classList.add('hidden')
+
 
         }
         document.querySelector('.explanation').innerText = data.explanation
@@ -56,6 +64,9 @@ function getFetch(){
     document.querySelector('.explanation').innerText = ''
     document.querySelector('.explanation').style.padding = '0rem'
     document.querySelector('p').classList.toggle('error')
+    document.querySelector('iframe').classList.add('hidden')
+    document.querySelector('img').classList.add('hidden')
+
   }
 
   
