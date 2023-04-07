@@ -8,9 +8,14 @@
   margin: 0;
   list-style-type: none;
   text-decoration: none;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.hidden{
+  display: none;
+}
+.warn{
+  
 }
 
 /******************************************
@@ -24,6 +29,7 @@ body {
   height: 100%;
   background-color: black;
   position: fixed;
+  margin: 0;
 }
 .container{
   background-image: url(../img/bg-nasa-roc.jpg);
@@ -84,7 +90,7 @@ a:hover{
   align-items: center;
   width: 26%;
   gap: 1rem;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 .main-div-1 h1{
   font-size: 2.2rem;
@@ -94,6 +100,12 @@ a:hover{
 }
 .pick-date-p{
   text-align: center;
+}
+.hidden{
+  background-color: red;
+  color: white;
+  width: 100%;
+  padding: 1rem;
 }
 form{
   width: 100%;
@@ -113,7 +125,7 @@ input, input::placeholder{
 input[type="date"]
 {
     display:block;
-    -webkit-appearance: textfield;
+    appearance: textfield;
     -moz-appearance: textfield;
     min-height: 1.2em;
     min-width: 95%;
@@ -162,19 +174,21 @@ iframe{
 /* ADDITIONAL STYLES
 /*******************************************/
 
-@media screen 
-  and (max-device-width: 1200px) 
-  and (max-device-width: 1600px){
+@media screen and (max-width: 800px)
+  {
   html{
-    font-size: 30px;
+    font-size: 16px;
   }
-  body, .container, .main {
-    position: static;
-  }
+ body, .container, .main{
+  position: static;
+ }
   nav{
     padding-right: 2rem;
     padding-left: 2rem;
     gap: 2rem;
+  }
+  .remove{
+    display: none;
   }
   .nav-ul-1{
     display: flex;
@@ -185,6 +199,8 @@ iframe{
     flex-basis: 50%;
   }
   .main{
+    top: 5rem;
+    height: auto;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -201,6 +217,7 @@ iframe{
     width: 100%;
   }
   .main-div-2{
+    /* display: none; */
     margin-top: 6rem;
     height: auto;
   }
@@ -209,7 +226,7 @@ iframe{
     position: static;
     top: 0;
     left: 0;
-    font-size: 20px;
+    font-size: 1rem;
     text-align: center;
   }
 }
