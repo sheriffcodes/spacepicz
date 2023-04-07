@@ -1,4 +1,4 @@
-//Example fetch using pokemonapi.co
+
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
@@ -20,8 +20,8 @@ function getFetch(){
     document.querySelector('.explanation').innerText = ''
     document.querySelector('.explanation').style.padding = '0rem'
     document.querySelector('p').classList.remove('error')
-
     //
+    
     const url = `https://api.nasa.gov/planetary/apod?api_key=qWCRPmj5gDod3u6MJFLykXRQVMAmMrGfIU2iV1my&date=${choice}`
 
   fetch(url)
@@ -36,7 +36,10 @@ function getFetch(){
           document.querySelector('iframe').src = ''
         }else if (data.media_type === 'video'){
           document.querySelector('img').src = ''
+          document.querySelector('iframe').classList.remove('hidden')
           document.querySelector('iframe').src = data.url
+          document.querySelector('.explanation').style.padding = '1rem'
+
         }
         document.querySelector('.explanation').innerText = data.explanation
       })
