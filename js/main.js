@@ -19,7 +19,7 @@ function getFetch(){
     document.querySelector('iframe').src = ''
     document.querySelector('.explanation').innerText = ''
     document.querySelector('.explanation').style.padding = '0rem'
-    document.querySelector("p").classList.remove("hidden")
+    document.querySelector('p').classList.remove('error')
 
     //
     const url = `https://api.nasa.gov/planetary/apod?api_key=qWCRPmj5gDod3u6MJFLykXRQVMAmMrGfIU2iV1my&date=${choice}`
@@ -52,7 +52,7 @@ function getFetch(){
     document.querySelector('iframe').src = ''
     document.querySelector('.explanation').innerText = ''
     document.querySelector('.explanation').style.padding = '0rem'
-    document.querySelector("p").classList.toggle("hidden")
+    document.querySelector('p').classList.toggle('error')
   }
 
   
