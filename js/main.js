@@ -12,8 +12,8 @@ function getFetch(){
   console.log(dateLimit)
   const todaysDate = new Date()
   
-  if(choiceDate > dateLimit && choiceDate < todaysDate){
-
+  if(choiceDate >= dateLimit && choiceDate < todaysDate){
+    
     // To empty data on each request
     document.querySelector('img').src = ''
     document.querySelector('iframe').src = ''
@@ -46,10 +46,15 @@ function getFetch(){
           document.querySelector('iframe').src = data.url
           document.querySelector('.explanation').style.padding = '1rem'
           document.querySelector('#img').classList.add('hidden')
-
-
         }
-        document.querySelector('.explanation').innerText = data.explanation
+        
+        // condition for if explanation data is not yet uploaded (like today - undefined) or already available (uploaded)
+        if(document.querySelector('.explanation').innerText = 'undefined' && data.code === 404){
+          document.querySelector('.explanation').style.padding = '1rem'
+          document.querySelector('.explanation').innerHTML = `${data.msg} <br> data will be uploaded soon`
+        }else{
+          document.querySelector('.explanation').innerText = data.explanation
+        }
       })
       .catch(err => {
           console.log(`error ${err}`)
@@ -57,7 +62,7 @@ function getFetch(){
 
 
 
-  } else {
+  }else {
     console.log("out")
     document.querySelector('img').src = ''
     document.querySelector('iframe').src = ''
